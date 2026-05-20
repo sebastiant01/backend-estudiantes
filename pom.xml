@@ -11,8 +11,8 @@
 	<groupId>com.backend</groupId>
 	<artifactId>estudiantes</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name/>
-	<description/>
+	<name>Back-End Estudiantes</name>
+	<description>Un sistema back-end el cual está situado en la admin. de la cátedra de deportes de una universidad</description>
 	<url/>
 	<licenses>
 		<license/>
