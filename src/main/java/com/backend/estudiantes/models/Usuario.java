@@ -1,16 +1,13 @@
 package com.backend.estudiantes.models;
 
+import com.backend.estudiantes.models.enums.Role;
 import jakarta.persistence.*;
-import org.springframework.data.annotation.CreatedDate;
-import org.springframework.data.annotation.LastModifiedDate;
-import org.springframework.data.jpa.domain.support.AuditingEntityListener;
-
-import java.time.LocalDateTime;
+import lombok.Data;
 
 @Entity
 @Table(name = "usuarios")
-@EntityListeners(AuditingEntityListener.class)
-public class Usuario {
+@Data
+public class Usuario extends AuditBase {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id_usuario;
@@ -33,12 +30,4 @@ public class Usuario {
 
     @Column(nullable = false, columnDefinition = "boolean default true")
     private Boolean activo = true;
-
-    @CreatedDate
-    @Column(name = "fecha_creacion", updatable = false)
-    private LocalDateTime fechaCreacion;
-
-    @LastModifiedDate
-    @Column(name = "fecha_modificacion")
-    private LocalDateTime fechaModificacion;
 }
